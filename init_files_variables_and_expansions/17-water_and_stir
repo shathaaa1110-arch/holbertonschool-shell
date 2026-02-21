@@ -1,0 +1,7 @@
+#!/bin/bash
+W=$(echo $WATER | tr "water" "01234")
+S=$(echo $STIR | tr "stir." "01230")
+W_DEC=$((5#$W))
+S_DEC=$((4#$S))
+TOTAL=$((W_DEC + S_DEC))
+printf "%o\n" $TOTAL | tr "01234567" "bestchol"
